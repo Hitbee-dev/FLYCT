@@ -2,7 +2,7 @@
 
 ## * **필독!**
 - **Github**가 별로 익숙하지 않은 분들은 `톡방`에서 편하게 물어보셔도 되고, `Youtube`로 공부하시면서 스터디를 진행하시면 됩니다!
-- FLYCT 코딩테스트 스터디의 **RULE**을 꼭 지켜주시기 바라며, [RULE](https://github.com/Hitbee-dev/FLYCT/tree/master/flyct_rule)을 참고 해 주시기 바랍니다.
+- FLYCT 코딩테스트 스터디의 **RULE**을 꼭 지켜주시기 바라며, [RULE](https://github.com/Hitbee-dev/FLYCT/tree/master/%23flyct_rule)을 참고 해 주시기 바랍니다.
 - 먼저, 이 Repo를 **Fork**하여, 매주 `월요일 ~ 일요일` 안에 작업 후 **PR** 보내주시면 됩니다.
 - 매주 `월요일 오전 9시` 이후 **Sync Fork**을 통해 **master Repo**에서 스터디원들의 데이터를 갱신하시기 바랍니다.
 - **commit시** 되도록이면 **문제 하나당 1 commit**을 부탁드리며, commit message는 `Solved: {문제}.py`로 commit 해 주시기 바랍니다.
