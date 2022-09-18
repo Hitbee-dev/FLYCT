@@ -43,3 +43,11 @@
 - **프로그래머스**
   - [최댓값과 최솟값](https://school.programmers.co.kr/learn/courses/30/lessons/12939)
 ---
+### 6주차 2022-09-19(월) ~ 2022-09-25(일)
+- **백준**
+  - [14501](https://www.acmicpc.net/problem/14501)
+  - [2667](https://www.acmicpc.net/problem/2667)
+  - [1966](https://www.acmicpc.net/problem/1966)
+- **프로그래머스**
+  - [카펫](https://school.programmers.co.kr/learn/courses/30/lessons/42842)
+---
