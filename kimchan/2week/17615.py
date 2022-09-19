@@ -9,20 +9,57 @@
 import sys
 input = sys.stdin.readline
 result = {}
-N = 9
-S = ['R', 'B', 'B', 'B', 'R', 'B', 'R', 'R', 'R']
-# S = ['R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R']
-# N = int(input().strip())
-# S = list(input().strip())
-r_idx = []
-b_idx = []
+N = int(input().strip())
+S = input().strip()
+new_s = []
 
-# r, b index나누기
-for idx, s in enumerate(S):
-    if s == 'R':
-        r_idx.append(idx)
+print(S.lstrip('R')) 
+print(S.lstrip('R').count('R')) 
+# 빨간공과 파란공 묶기
+buf = []
+for s in S:
+    if buf == []:
+        buf.append(s)
     else:
-        b_idx.append(idx)
+        if buf[-1] == s:
+            buf.append(s)
+        else:
+            new_s.append(buf)
+            buf = [s]
+if buf != []:
+    new_s.append(buf)
 
-result = S.copy()
-print(r_idx, b_idx)
+count = 0
+# new_s의 홀수번째 인덱스가 B의 개수
+for idx, s in enumerate(new_s):
+    if idx % 2 == 1:
+        count += len(s)
+result["r_left"] = count
+count = 0
+
+# new_s의 짝수번째 인덱스가 B의 개수
+for idx, s in enumerate(new_s):
+    if idx % 2 != 1 and idx != 0:
+        count += len(s)
+result["b_left"] = count
+count = 0
+
+# new_s의 짝수번째 인덱스가 B의 개수
+for idx, s in enumerate(reversed(new_s)):
+    if idx % 2 != 1 and idx != 0:
+        count += len(s)
+result["r_right"] = count
+count = 0
+
+# new_s의 홀수번째 인덱스가 B의 개수
+for idx, s in enumerate(reversed(new_s)):
+    if idx % 2 == 1:
+        count += len(s)
+result["b_right"] = count
+count = 0
+print(min(result.values()))
+
+# solution(short-coding)
+input()
+b=input()
+print(min([b.lstrip('R').count('R'),b.lstrip('B').count('B'),b.rstrip('R').count('R'),b.rstrip('B').count('B')]))
